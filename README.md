@@ -1,1 +1,2 @@
-# goit-markup-hw-06
+# goit-markup-hw-06\
+live https://yuriizag.github.io/goit-markup-hw-06/
