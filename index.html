@@ -57,43 +57,48 @@
                 </div>
                 <div class="backdrop is-hidden" data-modal>
                     <div class="modal">
-                        <h2> Залиште свої дані, ми вам передзвонимо</h2>
+                        <h3> Залиште свої дані, ми вам передзвонимо</h3>
                         <form class="modal-form">
-                            <ul class="modal-list">
-                                <li>
-                                    <label>
+
+                                    <label class="reg-field">
                                         <span>Ім'я</span>
-                                        <svg >
-                                            <use href="./image/icons.svg#icon-person-black"></use>
-                                        </svg>
-                                        <input type="text" name="name">
+                                        <div class="input-container">
+                                            <input type="text" name="name" class="login-inf">
+                                            <svg class="person-icon">
+                                                <use href="./image/icons.svg#icon-person-black"></use>
+                                            </svg>
+                                        </div>
                                     </label>
-                                </li>
-                                <li>
-                                    <label>
+                                    <label class="reg-field">
                                         <span>Телефон</span>
-                                        <svg >
-                                            <use href="./image/icons.svg#icon-phone-black"></use>
-                                        </svg>
-                                        <input type="tel" name="telephone">
+                                        <div class="input-container">
+                                            <input type="tel" name="telephone" class="login-inf">
+                                            <svg class="tel-icon">
+                                                <use href="./image/icons.svg#icon-phone-black"></use>
+                                            </svg>
+                                        </div>
+                                        
                                     </label>
-                                </li>
-                                <li>
-                                    <label>
+                                    <label class="reg-field">
                                         <span>Пошта</span>
-                                        <svg>
-                                            <use href="./image/icons.svg#icon-email-black"></use>
-                                        </svg>
-                                        <input type="email" name="email">
+                                        <div class="input-container">
+                                            <input type="email" name="email" class="login-inf">
+                                            <svg class="mail-icon">
+                                                <use href="./image/icons.svg#icon-email-black"></use>
+                                            </svg>
+                                        </div>    
                                     </label>
-                                </li>
-                            </ul>
-                            <label>
+                            <label class="commentary-area">
+                                <span>Коментар</span>
                                 <textarea name="commentary" rows="10" placeholder="Введіть текст"></textarea>
                             </label>
-                            <label>Погоджуюся з розсилкою та приймаю <a href="#">Умови договору</a>
-                                <input type="checkbox" name="agreement">
-                            </label>
+                            <label class="checkbox">
+                                <div class="checkbox-container">
+                                    <input type="checkbox" name="agreement" class="true-checkbox visually-hidden" >
+                                    <div class="fake-checkbox"></div>
+                                    <span>Погоджуюся з розсилкою та приймаю</span><a href="#"> Умови договору</a>
+                                </div>
+                            </label> 
                             <button class="modal-send" type="submit">Відправити</button>
                         </form>
                         <button class="close-button" type="button" data-modal-close>
