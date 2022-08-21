@@ -55,59 +55,7 @@
                     <h1 class="hero-heading">Ефективні рішення для вашого бізнесу</h1>
                     <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
                 </div>
-                <div class="backdrop is-hidden" data-modal>
-                    <div class="modal">
-                        <h3> Залиште свої дані, ми вам передзвонимо</h3>
-                        <form class="modal-form">
-
-                                    <label class="reg-field">
-                                        <span>Ім'я</span>
-                                        <div class="input-container">
-                                            <input type="text" name="name" class="login-inf">
-                                            <svg class="person-icon">
-                                                <use href="./image/icons.svg#icon-person-black"></use>
-                                            </svg>
-                                        </div>
-                                    </label>
-                                    <label class="reg-field">
-                                        <span>Телефон</span>
-                                        <div class="input-container">
-                                            <input type="tel" name="telephone" class="login-inf">
-                                            <svg class="tel-icon">
-                                                <use href="./image/icons.svg#icon-phone-black"></use>
-                                            </svg>
-                                        </div>
-                                        
-                                    </label>
-                                    <label class="reg-field">
-                                        <span>Пошта</span>
-                                        <div class="input-container">
-                                            <input type="email" name="email" class="login-inf">
-                                            <svg class="mail-icon">
-                                                <use href="./image/icons.svg#icon-email-black"></use>
-                                            </svg>
-                                        </div>    
-                                    </label>
-                            <label class="commentary-area">
-                                <span>Коментар</span>
-                                <textarea name="commentary" rows="10" placeholder="Введіть текст"></textarea>
-                            </label>
-                            <label class="checkbox">
-                                <div class="checkbox-container">
-                                    <input type="checkbox" name="agreement" class="true-checkbox visually-hidden" >
-                                    <div class="fake-checkbox"></div>
-                                    <span>Погоджуюся з розсилкою та приймаю</span><a href="#"> Умови договору</a>
-                                </div>
-                            </label> 
-                            <button class="modal-send" type="submit">Відправити</button>
-                        </form>
-                        <button class="close-button" type="button" data-modal-close>
-                            <svg class="close-icon">
-                                <use href="./image/icons.svg#icon-close"></use>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+                
         </section>
 
         <!--Переваги -->
@@ -338,7 +286,7 @@
                                         </svg>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul> 
                         </div>
                     </li>
                 </ul>
@@ -443,23 +391,91 @@
                         </li>
                     </ul>
                 </div>
-                <form class="footer-form">
-                    <label>
-                        <span>Підпишіться на розсилку</span>
-                        <input type="email" name="email" id="email" placeholder="E-mail">
-                    </label>
-                    <button type="submit">
+                <div class="form-container">
+                    <p class="invite-phrase">Підпишіться на розсилку</p>
+                    <form class="footer-form">
+                        <label>  
+                            <input type="email" name="email" id="email" placeholder="E-mail">
+                        </label>
+                        <button type="submit">
                             Підписатись
                             <svg class="send-icon">
-                            <use href="./image/icons.svg#icon-send"></use>
-                        </svg>
-
-                    </button>
-                    
-                </form>
+                                <use href="./image/icons.svg#icon-send"></use>
+                            </svg>
+                        </button>
+                
+                    </form>
+                </div>
             </div>
     </footer>
-       
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <p class="modal-heading"> Залиште свої дані, ми вам передзвонимо</p>
+            <form class="modal-form">
+    
+                
+                <div class="reg-container">
+                    <label class="reg-field" for="person-name">
+                        <span>Ім'я</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="text" name="name" class="login-inf" id="person-name">
+                        <svg class="person-icon">
+                            <use href="./image/icons.svg#icon-person-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reg-container">
+                    <label class="reg-field" for="person-tel">
+                        <span>Телефон</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="tel" name="telephone" class="login-inf" id="person-tel">
+                        <svg class="tel-icon">
+                            <use href="./image/icons.svg#icon-phone-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <div class="reg-container">
+                    <label class="reg-field" for="person-email">
+                        <span>Пошта</span>
+                    </label>
+                    <div class="input-container">
+                        <input type="email" name="email" class="login-inf" id="person-email">
+                        <svg class="mail-icon">
+                            <use href="./image/icons.svg#icon-email-black"></use>
+                        </svg>
+                    </div>
+                </div>
+                <label class="commentary-area">
+                    <span>Коментар</span>
+                    <textarea name="commentary" rows="10" placeholder="Введіть текст"></textarea>
+                </label>
+                    <div class="checkbox-container">
+                        <input type="checkbox" name="agreement" class="true-checkbox visually-hidden" id="modal-checkbox">
+                        <svg class="icon-checkbox icon-check">
+                           <use href="./image/icons.svg#icon-check"></use>
+                        </svg>
+                        <svg class="icon-checkbox fake-checkbox-focus">
+                            <use href="./image/icons.svg#icon-fake-checkbox-focus"></use>
+                        </svg>
+                        <svg class="icon-checkbox fake-checkbox">
+                            <use href="./image/icons.svg#icon-fake-checkbox"></use>
+                        </svg>
+                        <label class="checkbox-label" for="modal-checkbox">
+                           <span class="agreement-label">Погоджуюся з розсилкою та приймаю</span><a href="#" class="agreement-link"> Умови договору</a>
+                        </label>
+                    </div>
+                
+                <button class="modal-send" type="submit">Відправити</button>
+            </form>
+            <button class="close-button" type="button" data-modal-close>
+                <svg class="close-icon">
+                    <use href="./image/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+        </div>
+    </div>
     <script src="./js/modal.js"></script>
     
 </body>

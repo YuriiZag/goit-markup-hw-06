@@ -238,7 +238,8 @@ nav{
     bottom:50%;
     transform:translate(-50%, -50%) scale(1);
     width: 530px;
-    height: 580px;
+    min-height: 600px;
+
     padding: 40px;
 
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
@@ -272,10 +273,15 @@ nav{
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.modal .close-button:hover, .modal.close-button:focus{
+.modal .close-button:hover{
+    fill: var(--primary-hover-color);
+    cursor: pointer;
+}
+
+.modal .close-button:focus{
     fill: var(--primary-hover-color);
 }
-.modal h3{
+.modal .modal-heading{
     margin: 0 0 12px 0;
     text-align: center;
     
@@ -286,6 +292,7 @@ nav{
 }
 .modal-form{
     width:100%;
+    
 }
 .modal-form span{
     color:var(--secondary-text-color);
@@ -302,7 +309,7 @@ nav{
     line-height: 1.16;
     letter-spacing: 0.01em;
 }
-.modal-form .reg-field{
+.modal-form .reg-container{
     display: block;
     margin-bottom: 10px;
     
@@ -311,7 +318,7 @@ nav{
     margin-top: 4px;
     position: relative;
 }
-.reg-field svg{
+.reg-container svg{
     position: absolute;
     width: 18px;
     height: 18px;
@@ -331,9 +338,12 @@ nav{
     width: 11px;
     height: 11px;
 }
+.commentary-area{
+    display: block;
+    margin-bottom: 20px;
+}
 .modal-form textarea{
     padding: 12px 16px;
-    margin-bottom: 20px;
     margin-top: 4px;
 
     resize: none;
@@ -364,29 +374,31 @@ nav{
 
 }
 .checkbox-container{
+    position: relative;
+    
     display: flex;
     align-items: center;
-    padding-left: 21px;
-    
+    padding-left: 14px; 
 }
-.checkbox span{
+.checkbox-label{
+    padding-left: 23px;
+}
+.checkbox-container .agreement-label{
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
 
-    margin-right: 4px;
 }
-.checkbox a{
+.checkbox-container .agreement-link{
     color: var(--primary-hover-color);
     font-weight: 400;
-    font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
+    
 
-    margin-right: 4px;
+    margin-left: 4px;
 }
-.fake-checkbox{
+/* .fake-checkbox{
     display: inline-block;
     width: 16px;
     height: 15px;
@@ -407,7 +419,35 @@ nav{
 .true-checkbox:checked~.fake-checkbox{
     background-color: var(--primary-hover-color);
     background-image: url(../image/icon-check.svg);
-    background-size: cover;
+    background-size: cover; 
+}*/
+.icon-checkbox{
+    position: absolute;
+
+    left: 13px;
+    pointer-events: none;
+
+    width: 16px;
+    height: 15px;
+}
+.icon-check{
+    background-color: var(--primary-hover-color);
+    opacity: 0;
+}
+.fake-checkbox-focus{
+    opacity: 0;
+}
+.true-checkbox:focus~.fake-checkbox{
+    opacity: 0;
+}
+.true-checkbox:focus~.fake-checkbox-focus {
+    opacity: 1;
+}
+.true-checkbox:checked~.icon-check{
+    opacity: 1;
+}
+.true-checkbox:checked~.fake-checkbox{
+    opacity: 0;
 }
 .modal-send{
     display: block;
@@ -808,10 +848,13 @@ footer .social-link-header{
 footer>.container {
     align-items: baseline;
 }
+.form-container{
+    margin-left: 93px;  
+}
 .footer-form{
     position: relative;
     width: 570px;
-    margin-left: 93px;
+    
 }
 .footer-form>label{
     display: flex;
@@ -856,7 +899,7 @@ footer>.container {
     width:24px; 
     height:24px;
 }
-.footer-form span{
+.invite-phrase{
     margin-bottom: 20px;
 
     color: var(--primary-white-color);
