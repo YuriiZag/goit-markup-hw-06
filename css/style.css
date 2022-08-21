@@ -398,29 +398,6 @@ nav{
 
     margin-left: 4px;
 }
-/* .fake-checkbox{
-    display: inline-block;
-    width: 16px;
-    height: 15px;
-    background-image: url(../image/fake-checkbox.svg); 
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    margin-right: 8px;
-
-    border-radius: 4px;
-}
-.true-checkbox:focus~.fake-checkbox{
-    background-image: url(../image/fake-checkbox-focus.svg); 
-    background-size: cover;
-    
-    
-}
-.true-checkbox:checked~.fake-checkbox{
-    background-color: var(--primary-hover-color);
-    background-image: url(../image/icon-check.svg);
-    background-size: cover; 
-}*/
 .icon-checkbox{
     position: absolute;
 
